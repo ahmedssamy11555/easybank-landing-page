@@ -239,7 +239,7 @@ a.button:hover {
   }
 }
 .hero__image {
-  background-image: url("../../images/bg-intro-mobile.svg");
+  background-image: url("../images/bg-intro-mobile.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: 17.5rem;
@@ -250,7 +250,7 @@ a.button:hover {
     flex: 2;
     order: 2;
     min-height: 42rem;
-    background-image: url("../../images/bg-intro-desktop.svg");
+    background-image: url("../images/bg-intro-desktop.svg");
     background-position: left center;
   }
 }
