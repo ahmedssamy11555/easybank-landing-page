@@ -1,0 +1,48 @@
+.articles {
+    display: flex;
+    flex-direction: column;
+    background-color: $VeryLightGray;
+    @media (max-width: 39.9375em){
+        padding: 70px 25px;
+        h2{
+            text-align: center;
+        }
+    }
+    h2 {
+        padding-bottom: 60px;
+        font-size: 30px;
+        color: $darkBlue;
+        font-weight: 400;
+    }
+    &__article{
+        background-color: $White;
+        display: flex;
+        flex-direction: column;
+        img{
+            flex: 1;
+            border-radius: 6px 6px 0 0;
+    
+            
+        };
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            padding: 30px 30px;
+            small {
+                font-size: 10px;
+            }
+            h4 {
+                padding: 16px 0;
+                font-size: 13px;
+                font-weight: 400;
+                color: $darkBlue;
+            }
+            P{
+                font-size: 13px;
+            }
+        }
+    }
+}

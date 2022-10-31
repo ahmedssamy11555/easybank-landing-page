@@ -1,0 +1,60 @@
+.services {
+    @include breakpoint-down(small){
+        padding:70px 25px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        p {
+            font-size: 14px;
+        }
+       
+        
+    }
+
+    background-color: $LightGrayishBlue;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        h2 {
+            font-size: 2.1875rem;
+            font-weight: 400;
+            color: $darkBlue;
+            padding-bottom: 35px;
+        }
+        p{
+            padding-bottom: 75px;
+            font-size: 20px;
+        }
+        @include breakpoint-down(small){
+            p {
+                font-size: 14px;
+            }
+            h2{
+                padding-bottom: 25px;
+            }
+        }
+      
+        }
+    
+    &__service {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+
+            i{
+                padding-bottom: 40px;
+        
+            }
+            h3 {
+                padding-bottom: 34px;
+                color: $darkBlue;
+                font-weight: 400;
+            }
+            @include breakpoint-down(small){
+                h3{
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }

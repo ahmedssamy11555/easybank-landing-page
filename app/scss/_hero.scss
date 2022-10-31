@@ -1,0 +1,78 @@
+.hero {
+    overflow: hidden;
+    @include breakpoint-down(large){
+        margin: 0;
+    }
+    @include breakpoint-up(large){
+        display: flex;
+        margin: 0 0 0 165px;
+    }
+    position: relative;
+
+    &__image {
+        background-image: url("/images/bg-intro-mobile.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-height: 17.5rem;
+        background-position-x: left center ;
+        
+        @include breakpoint-up(large){
+            flex: 2;
+            order: 2;
+            min-height: 42rem;
+            background-image: url("/images/bg-intro-desktop.svg");
+            background-position: left center;
+        }
+        img {
+            position: absolute;
+            @include breakpoint-up(large){
+                width: 600px;
+                right: -100px;
+                top: -50px;
+            }
+            @include breakpoint-down(medium){
+                width: 400px;
+                right: -100px;
+                top: -150px;
+            }
+            @include breakpoint-down(small){
+                display: block;
+                position: absolute;
+                width: 300px;
+                left: 8%;
+                top: -50px;
+
+            }
+        }
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+            flex: 1;
+            @include breakpoint-down(medium){
+                padding: 0 23px;
+                text-align: center;
+                align-items: center;
+            }
+
+        h1{
+            margin: 50px 0 0;
+            font-size: 40px;
+            font-weight: 400;
+            color: $darkBlue;
+         
+        }
+        p {
+            line-height: 1.8;
+            font-size: 19px;
+            padding: 40px 0;
+        }    
+        a.hero__cta {
+            margin: 14px 0 85px 0;
+            width: fit-content
+            }
+            
+        }
+};

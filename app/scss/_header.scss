@@ -1,0 +1,122 @@
+
+.header {
+
+    z-index: 1;
+    position: relative;
+    &.open {
+        .header__toggle{
+            > span {
+                height: 4px;
+                border-radius: 2px;
+            }
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+            > span:last-child {
+                transform: rotate(-45deg);
+            } 
+        }
+    }
+    nav {
+        padding-top: 1.0625rem ;
+        padding-bottom: 1.0625rem ;
+        background-color: $White;
+        position: relative;
+        @include breakpoint-down(large){
+            margin: 0;
+            padding: 23px;
+        }
+        @include breakpoint-up(large){
+            margin: 0px 165px;
+
+        }
+    }
+    &__logo{ 
+        img {
+            width: 8.8125rem;
+            height: 1.375rem;
+        }
+    }   
+    &__toggle { // Mobile Menu
+        
+        > span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            border-radius: 2px;
+            background-color:$darkBlue;
+            &:not(:last-child){
+                margin-bottom: 6px;
+            }
+            transform-origin: -1px 2px;;
+            transition: .3s;
+        }
+    }  
+    &__links {
+        a { 
+        font-size: $font-sm;
+        color:$GrayishBlue ;
+        transition: .3s ;
+        position: relative;
+        &:not(:last-of-type){
+            margin-right: 32px;
+        }
+        &:hover{
+            color: $darkBlue;
+            &::before {
+    
+                width: 100%;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -31px;
+            height: 4px;
+            display: block;
+            width: 0;
+            background:linear-gradient(to right, $LimeGreen, $BrightCyan);
+            transition: .3s;
+            border-radius: 2px;
+            
+        }
+        }
+    }
+    &__menu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 35px 140px;
+        background-color: hsl(0deg, 0%, 100%);
+        left: 50%;
+        top: 90px;
+        transform: translateX(-50%);
+        border-radius: 4px;
+        visibility: visible;
+        
+        > a{
+            color: $darkBlue;
+        };
+        > a:not(:last-child) {
+            padding-bottom: 30px;
+        }
+        
+    }
+
+}
+
+.overlay{
+    position: absolute;
+    background-image: linear-gradient($darkBlue, transparent);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    opacity: 0;
+    
+}
